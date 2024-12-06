@@ -1,16 +1,18 @@
-{pkgs, ...}: {
+{
   viAlias = true;
   vimAlias = true;
-
-  colorschemes.catppuccin.enable = true;
 
   opts = {
     relativenumber = true;
   };
 
+  colorschemes.catppuccin.enable = true;
+
   performance = {
     byteCompileLua = {
       enable = true;
+      configs = true;
+      initLua = true;
       nvimRuntime = true;
       plugins = true;
     };

@@ -1,9 +1,7 @@
 {
   imports = [
-    ./plugins.nix
+    ./plugins
     ./options.nix
     ./keymaps.nix
   ];
-
-  # fd
 }

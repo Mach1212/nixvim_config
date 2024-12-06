@@ -1,23 +1,25 @@
 {
-  extraConfigLua = ''
-    mapleader = " "
-  '';
-   
-  keymaps = [ 
+  globals.mapleader = " ";
+  keymaps = [
     {
-      key = "<leader>c";
-      action = "find_files";
-      options = {
-        desc = "Close buffer";
-      };
+      key = "<leader>q";
+      action = "<CMD>q<CR>";
+      options.desc = "Exit Vim";
     }
     {
-      action = "<cmd>q<CR>";
-      key = "<leader>q";
-      mode = "n";
-      options = {
-        desc = "Close nvim";
-      };
+      key = "<leader>Q";
+      action = "<CMD>q!<CR>";
+      options.desc = "Force Exit Vim";
+    }
+    {
+      key = "<leader>w";
+      action = "<CMD>w<CR>";
+      options.desc = "Write Buffer";
+    }
+    {
+      key = "<leader>W";
+      action = "<CMD>w!<CR>";
+      options.desc = "Force Write Buffer";
     }
   ];
 }
