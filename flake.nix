@@ -1,9 +1,15 @@
 {
-  description = "A very basic flake";
+  description = "My neovim configuration";
+
+  # RUSTC_WRAPPER=sccache
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
+    galaxyline = {
+      url = "github:NTBBloodbath/galaxyline.nvim";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -30,7 +36,7 @@
           module = import ./config; # import the module directly
           # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs = {
-            # inherit (inputs) foo;
+            inherit inputs;
           };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;

@@ -4,6 +4,7 @@
 
   opts = {
     relativenumber = true;
+    termguicolors = true;
   };
 
   colorschemes.catppuccin.enable = true;
