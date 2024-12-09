@@ -2,6 +2,11 @@
   plugins.barbar = {
     enable = true;
     keymaps = {};
+    settings = {
+      sidebar_filetypes = {
+        neo-tree = {event = "BufWipeout";};
+      };
+    };
   };
   keymaps = [
     {

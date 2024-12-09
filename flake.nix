@@ -10,6 +10,14 @@
       url = "github:NTBBloodbath/galaxyline.nvim";
       flake = false;
     };
+    plenary = {
+      url = "github:nvim-lua/plenary.nvim";
+      flake = false;
+    };
+    githubNotifications = {
+      url = "github:rlch/github-notifications.nvim";
+      flake = false;
+    };
   };
 
   outputs = {

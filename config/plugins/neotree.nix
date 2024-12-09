@@ -3,6 +3,9 @@
     enable = true;
     enableGitStatus = true;
     closeIfLastWindow = true;
+    extraOptions = {
+      window.width = 32;
+    };
   };
   keymaps = [
     {

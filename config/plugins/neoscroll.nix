@@ -4,7 +4,7 @@
   };
   extraConfigLua = ''
     require('neoscroll').setup({
-      duration_multiplier = 0.3,
+      duration_multiplier = .3,
     })
   '';
 }

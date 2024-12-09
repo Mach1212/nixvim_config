@@ -41,5 +41,25 @@
       action = "<C-w>k";
       options.desc = "Pane Goto Up";
     }
+    {
+      key = "<C-Left>";
+      action = "<C-w><";
+      options.desc = "Pane Goto Left";
+    }
+    {
+      key = "<C-Right>";
+      action = "<C-w>>";
+      options.desc = "Pane Goto Right";
+    }
+    {
+      key = "<C-Up>";
+      action = "<C-w>-";
+      options.desc = "Pane Goto Down";
+    }
+    {
+      key = "<C-Down>";
+      action = "<C-w>+";
+      options.desc = "Pane Goto Up";
+    }
   ];
 }

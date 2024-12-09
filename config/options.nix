@@ -7,7 +7,12 @@
     termguicolors = true;
   };
 
-  colorschemes.catppuccin.enable = true;
+  colorschemes.onedark = {
+    enable = true;
+    settings = {
+      style = "darker";
+    };
+  };
 
   performance = {
     byteCompileLua = {

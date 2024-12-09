@@ -137,6 +137,22 @@
         "type": "github"
       }
     },
+    "githubNotifications": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1686796071,
+        "narHash": "sha256-+khwWJyWcaejTbUYjyf0v/hofTbNUvjV6sIJxWJLz2M=",
+        "owner": "rlch",
+        "repo": "github-notifications.nvim",
+        "rev": "a1935937ec6f71ef8e72db73c66bc4e659f2aa3c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rlch",
+        "repo": "github-notifications.nvim",
+        "type": "github"
+      }
+    },
     "gitignore": {
       "inputs": {
         "nixpkgs": [
@@ -322,12 +338,30 @@
         "type": "github"
       }
     },
+    "plenary": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726602776,
+        "narHash": "sha256-bmmPekAvuBvLQmrnnX0n+FRBqfVxBsObhxIEkDGAla4=",
+        "owner": "nvim-lua",
+        "repo": "plenary.nvim",
+        "rev": "2d9b06177a975543726ce5c73fca176cedbffe9d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-lua",
+        "repo": "plenary.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
         "galaxyline": "galaxyline",
+        "githubNotifications": "githubNotifications",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "plenary": "plenary"
       }
     },
     "systems": {
