@@ -6,17 +6,19 @@
     extraOptions = {
       window.width = 32;
     };
+    gitStatusAsync = false;
     buffers.followCurrentFile.enabled = true;
     filesystem = {
-      followCurrentFile.enabled = true; 
+      hijackNetrwBehavior = "disabled";
+      followCurrentFile.enabled = true;
       useLibuvFileWatcher = true;
     };
   };
   keymaps = [
     {
-      key = "<leader>e";
-      action = "<CMD>Neotree toggle<CR>";
-      options.desc = "Neotree Toggle";
+      key = "<leader>o";
+      action = "<CMD>Neotree show<CR>";
+      options.desc = "Neotree Show";
     }
   ];
 }

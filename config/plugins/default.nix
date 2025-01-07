@@ -1,6 +1,7 @@
 {
   imports = [
     ./neotree.nix
+    ./better-escape.nix
     ./telescope.nix
     ./treesitter.nix
     ./treesitter-refactor.nix
@@ -15,9 +16,10 @@
     ./lazygit.nix
     ./comment.nix
     ./noice.nix
+    ./yazi.nix
+    ./number-toggle.nix
   ];
   plugins = {
-    better-escape.enable = true;
     guess-indent.enable = true;
     indent-blankline.enable = true;
     web-devicons.enable = true;
@@ -37,7 +39,7 @@
     };
     render-markdown.enable = true;
     gitsigns = {
-      enable = true;  
+      enable = true;
       settings.watch_gitdir.enable = true;
     };
     ts-context-commentstring.enable = true;

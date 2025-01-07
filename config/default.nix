@@ -1,9 +1,10 @@
 {
   imports = [
-    ./lsp
+    ./coding
     ./plugins
-    ./options.nix
-    ./keymaps.nix
     ./filetypeOpts.nix
+    ./keymaps.nix
+    ./lua.nix
+    ./options.nix
   ];
 }

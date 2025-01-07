@@ -1,6 +1,7 @@
 {
   plugins.rustaceanvim = {
     enable = true;
+    rustAnalyzerPackage = null;
     settings.server = {
       # cmd = [
       #   "rustup"
@@ -23,7 +24,7 @@
               Ok = {
                 postfix = "ok";
                 body = "Ok($\{receiver})";
-                description = "Wrap the expression in a `Resuult::Ok`";
+                description = "Wrap the expression in a `Result::Ok`";
                 scope = "expr";
               };
             };

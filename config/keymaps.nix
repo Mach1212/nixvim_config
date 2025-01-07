@@ -18,7 +18,7 @@
     }
     {
       key = "<leader>ww";
-      action = "<CMD>w<CR>";
+      action = "<CMD>wall<CR>";
       options.desc = "Buffer Write All";
     }
     {
@@ -66,27 +66,27 @@
       action = "<C-w>+";
       options.desc = "Pane Goto Up";
     }
-  #   {
-  #     mode = "n";
-  #     key = "[d";
-  #     options.desc = "Previous diagnostic";
-  # 
-  #     action.__raw = ''
-  #       function()
-  #         vim.diagnostic.goto_prev()
-  #       end
-  #     '';
-  #   }
-  #   {
-  #     mode = "n";
-  #     key = "]d";
-  #     options.desc = "Next diagnostic";
-  # 
-  #     action.__raw = ''
-  #       function()
-  #         vim.diagnostic.goto_next()
-  #       end
-  #     '';
-  #   }
+    {
+      key = "<leader>uw";
+      action = "<CMD>set wrap!<CR>";
+      options.desc = "Toggle Wrap";
+    }
+    {
+      mode = "v";
+      key = "<Tab>";
+      action = ">gv";
+      options.desc = "Indent Selection";
+    }
+    {
+      mode = "v";
+      key = "<S-Tab>";
+      action = "<gv";
+      options.desc = "UnIndent Selection";
+    }
+    # {
+    #   key = "";
+    #   action = "";
+    #   options.desc = "";
+    # }
   ];
 }

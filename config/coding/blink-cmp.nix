@@ -19,7 +19,7 @@
             enabled = true;
             semantic_token_resolution = {
               enabled = true;
-              blocked_filetypes = ["java"];
+              # blocked_filetypes = ["java"];
               timeout_ms = 400;
             };
           };
@@ -34,27 +34,29 @@
       };
       keymap = {
         preset = "super-tab";
-        "<Tab>" = 
-          let 
-            select_next_and_move_snippet = helpers.mkRaw ''function(cmp)
+        "<Tab>" = let
+          select_next_and_move_snippet = helpers.mkRaw ''
+            function(cmp)
               if not cmp.snippet_active() then return cmp.select_next() end
-            end''; 
-          in [
-            select_next_and_move_snippet           
-            "snippet_forward"
-            "fallback"
-          ];
+            end
+          '';
+        in [
+          select_next_and_move_snippet
+          "snippet_forward"
+          "fallback"
+        ];
         "<S-Tab>" = ["select_prev"];
-        "<CR>" = 
-          let 
-            smtn = helpers.mkRaw ''function(cmp)
+        "<CR>" = let
+          select_and_accept = helpers.mkRaw ''
+            function(cmp)
               if cmp.snippet_active() then return cmp.accept()
               else return cmp.select_and_accept() end
-            end''; 
-          in [ 
-            smtn 
-            "fallback" 
-          ];
+            end
+          '';
+        in [
+          select_and_accept
+          "fallback"
+        ];
       };
       # signature = {
       #   enabled = true;
