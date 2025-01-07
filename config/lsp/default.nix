@@ -1,15 +1,14 @@
 {
   imports = [
     ./rustaceanvim.nix
+    ./lsp-lines.nix
+    ./blink-cmp.nix
   ];
   plugins.lsp = {
     enable = true;
+    servers = {
+      nixd.enable = true;
+    };
+    # inlayHints = true;
   };
-  keymaps = [
-    # {
-    #   key = "<leader>e";
-    #   action = "<CMD>Neotree toggle<CR>";
-    #   options.desc = "Neotree Toggle";
-    # }
-  ];
 }

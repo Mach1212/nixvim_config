@@ -2,6 +2,7 @@
   imports = [
     ./neotree.nix
     ./telescope.nix
+    ./treesitter.nix
     ./treesitter-refactor.nix
     ./treesitter-textobjects.nix
     ./barbar.nix
@@ -12,24 +13,15 @@
     ./notify.nix
     ./galaxyline.nix
     ./lazygit.nix
+    ./comment.nix
+    ./noice.nix
   ];
   plugins = {
     better-escape.enable = true;
     guess-indent.enable = true;
-    noice = {
-      enable = true;
-      settings.presets = {
-        lsp_doc_border = true;
-        command_palette = true;
-      };
-    };
     indent-blankline.enable = true;
     web-devicons.enable = true;
     which-key.enable = true;
-    treesitter = {
-      enable = true;
-      nixvimInjections = false;
-    };
     treesitter-context.enable = true;
     intellitab.enable = true;
     rainbow-delimiters.enable = true;
@@ -44,5 +36,10 @@
       };
     };
     render-markdown.enable = true;
+    gitsigns = {
+      enable = true;  
+      settings.watch_gitdir.enable = true;
+    };
+    ts-context-commentstring.enable = true;
   };
 }

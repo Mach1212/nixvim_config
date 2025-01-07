@@ -6,6 +6,11 @@
     extraOptions = {
       window.width = 32;
     };
+    buffers.followCurrentFile.enabled = true;
+    filesystem = {
+      followCurrentFile.enabled = true; 
+      useLibuvFileWatcher = true;
+    };
   };
   keymaps = [
     {

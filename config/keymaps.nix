@@ -17,6 +17,11 @@
       options.desc = "Buffer Write";
     }
     {
+      key = "<leader>ww";
+      action = "<CMD>w<CR>";
+      options.desc = "Buffer Write All";
+    }
+    {
       key = "<leader>W";
       action = "<CMD>w!<CR>";
       options.desc = "Buffer Write Forced";
@@ -61,5 +66,27 @@
       action = "<C-w>+";
       options.desc = "Pane Goto Up";
     }
+  #   {
+  #     mode = "n";
+  #     key = "[d";
+  #     options.desc = "Previous diagnostic";
+  # 
+  #     action.__raw = ''
+  #       function()
+  #         vim.diagnostic.goto_prev()
+  #       end
+  #     '';
+  #   }
+  #   {
+  #     mode = "n";
+  #     key = "]d";
+  #     options.desc = "Next diagnostic";
+  # 
+  #     action.__raw = ''
+  #       function()
+  #         vim.diagnostic.goto_next()
+  #       end
+  #     '';
+  #   }
   ];
 }

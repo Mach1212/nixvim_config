@@ -5,7 +5,11 @@
   opts = {
     relativenumber = true;
     termguicolors = true;
+    shiftwidth = 2;
+    tabstop = 2;
   };
+
+  clipboard.register = "unnamedplus";
 
   colorschemes.onedark = {
     enable = true;

@@ -20,8 +20,24 @@
         preview_cutoff = 120;
       };
       mappings = {
+        n = {
+          q = "close";
+          "h" = "results_scrolling_left"; # scroll left
+          "l" = "results_scrolling_right"; # scroll right
+          "j" =  "move_selection_next"; # scroll down
+          "k" = "move_selection_previous"; # scroll up
+          "<C-h>" = "preview_scrolling_left"; # scroll left
+          "<C-l>" = "preview_scrolling_right"; # scroll right
+          "<C-j>" = "preview_scrolling_down"; # scroll down
+          "<C-k>" = "preview_scrolling_up"; # scroll up
+        };
         i = {
-          "jk" = "close";
+          # ["<PageUp>"] = actions.results_scrolling_up,
+          # ["<PageDown>"] = actions.results_scrolling_down,
+          "<C-h>" = "preview_scrolling_left"; # scroll left
+          "<C-l>" = "preview_scrolling_right"; # scroll right
+          "<C-j>" = "preview_scrolling_down"; # scroll down
+          "<C-k>" = "preview_scrolling_up"; # scroll up
         };
       };
     };
