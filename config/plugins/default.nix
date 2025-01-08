@@ -7,12 +7,11 @@
     ./treesitter-refactor.nix
     ./treesitter-textobjects.nix
     ./barbar.nix
-    ./oil.nix
     ./neoscroll.nix
     ./mini.nix
     ./flash.nix
     ./notify.nix
-    ./galaxyline.nix
+    # ./galaxyline.nix
     ./lazygit.nix
     ./comment.nix
     ./noice.nix
@@ -20,6 +19,7 @@
     ./number-toggle.nix
   ];
   plugins = {
+    lz-n.enable = true;
     guess-indent.enable = true;
     indent-blankline.enable = true;
     web-devicons.enable = true;

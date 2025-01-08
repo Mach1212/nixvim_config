@@ -5,5 +5,6 @@
     # ./lsp-lines.nix
     ./blink-cmp.nix
     ./none-ls.nix
+    ./fastaction.nix
   ];
 }

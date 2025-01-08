@@ -1,4 +1,7 @@
-{helpers, ...}: {
+{helpers, pkgs, ...}: {
+  # extraPackages = {
+  #   (pkgs.stdenv.mkDerivation())
+  # };
   plugins.blink-cmp = {
     enable = true;
     settings = {

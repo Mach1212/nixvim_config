@@ -6,23 +6,27 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
-    galaxyline = {
-      url = "github:NTBBloodbath/galaxyline.nvim";
-      flake = false;
-    };
-    plenary = {
-      url = "github:nvim-lua/plenary.nvim";
-      flake = false;
-    };
-    githubNotifications = {
-      url = "github:rlch/github-notifications.nvim";
-      flake = false;
-    };
+    # nixpkgs-old.url = "github:NixOS/nixpkgs/05bbf675397d5366259409139039af8077d695ce";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
+    # galaxyline = {
+    #   url = "github:NTBBloodbath/galaxyline.nvim";
+    #   flake = false;
+    # };
+    # plenary = {
+    #   url = "github:nvim-lua/plenary.nvim";
+    #   flake = false;
+    # };
+    # githubNotifications = {
+    #   url = "github:rlch/github-notifications.nvim";
+    #   flake = false;
+    # };
   };
 
   outputs = {
-    nixvim,
     flake-parts,
+    nixvim,
+    # nixpkgs-old,
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -33,11 +37,13 @@
         "x86_64-linux"
       ];
 
+      # (),
       perSystem = {
         pkgs,
         system,
         ...
       }: let
+        # pkgs-old = import nixpkgs-old {inherit system;};
         nixvim' = nixvim.legacyPackages."${system}";
         nixvimModule = {
           inherit pkgs;
@@ -45,6 +51,7 @@
           # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs = {
             inherit inputs;
+            # inherit pkgs-old;
           };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;

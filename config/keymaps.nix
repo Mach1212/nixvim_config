@@ -4,12 +4,12 @@
     {
       key = "<leader>q";
       action = "<CMD>q<CR>";
-      options.desc = "Vim Exit";
+      options.desc = "Vim Quit";
     }
     {
       key = "<leader>Q";
       action = "<CMD>q!<CR>";
-      options.desc = "Vim Exit Forced";
+      options.desc = "Vim Quit Forced";
     }
     {
       key = "<leader>w";
@@ -82,6 +82,12 @@
       key = "<S-Tab>";
       action = "<gv";
       options.desc = "UnIndent Selection";
+    }
+    {
+      mode = "c";
+      key = "q";
+      action = "<Esc>";
+      options.desc = "Escape from command lines";
     }
     # {
     #   key = "";

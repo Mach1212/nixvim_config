@@ -12,7 +12,7 @@
   keymaps = [
     {
       key = "<leader>ul";
-      action = ''<CMD>lua require("lsp_lines").toggle()<CR>'';
+      action = ''<CMD>require("lsp_lines").toggle()<CR>'';
       options.desc = "Toggle lsp_lines";
     }
   ];

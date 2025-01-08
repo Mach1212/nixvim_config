@@ -1,5 +1,7 @@
+# {pkgs-old, ...}:
 {
   plugins.noice = {
+    # package = pkgs-old.vimPlugins.noice-nvim;
     enable = true;
     settings = {
       lsp.override = {

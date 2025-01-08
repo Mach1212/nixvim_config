@@ -17,8 +17,8 @@
   keymaps = [
     {
       key = "<leader>o";
-      action = "<CMD>Neotree show<CR>";
-      options.desc = "Neotree Show";
+      action = "<CMD>Neotree toggle<CR>";
+      options.desc = "Neotree Toggle";
     }
   ];
 }

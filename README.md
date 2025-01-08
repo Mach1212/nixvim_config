@@ -1,3 +1,6 @@
+# Dev
+Update via nix flake update --override-input nixpkgs github:NixOS/nixpkgs/c46290747b2aaf090f48a478270feb858837bf11
+
 # todo
 
 ## lsp-lines
@@ -30,6 +33,7 @@ keybind \<space>ww doesn't work
 ## when I delete indented blank line move to above line
 ## Why does neovim highlight issue
 ## See if noice signature is better than blink-cmp signature
+## The lines at the top idk what they are but they go away when the cursor goes there. have the cursor stay below them.
 
 # Completed
 

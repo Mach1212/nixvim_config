@@ -49,5 +49,10 @@
       action = "<Cmd>BufferClose<CR>";
       options.desc = "Buffer Close";
     }
+    {
+      key = "<leader>C";
+      action = "<Cmd>BufferClose!<CR>";
+      options.desc = "Buffer Close Forced";
+    }
   ];
 }
