@@ -14,6 +14,7 @@
       #   };
       # };
       surround = {
+        n_lines = 100;
         mappings = {
           add = "Ss"; # Add surrounding in Normal and Visual modes
           delete = "dD"; # Delete surrounding

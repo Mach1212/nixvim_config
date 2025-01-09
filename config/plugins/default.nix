@@ -11,17 +11,19 @@
     ./mini.nix
     ./flash.nix
     ./notify.nix
-    # ./galaxyline.nix
     ./lazygit.nix
     ./comment.nix
     ./noice.nix
     ./yazi.nix
     ./number-toggle.nix
+    ./inc-rename.nix
+    ./octo.nix
+    ./indent-blankline.nix
+    ./astrotheme.nix
   ];
   plugins = {
     # lz-n.enable = true;
     guess-indent.enable = true;
-    indent-blankline.enable = true;
     web-devicons.enable = true;
     which-key.enable = true;
     treesitter-context.enable = true;

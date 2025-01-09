@@ -10,6 +10,15 @@
         nix = [
           "alejandra"
         ];
+        lua = [
+          "stylua"
+        ];
+        javascript = [
+          "prettierd"
+        ];
+        typescript = [
+          "prettierd"
+        ];
         "_" = [
           "squeeze_blanks"
           "trim_whitespace"
@@ -56,6 +65,12 @@
         };
         alejandra = {
           command = lib.getExe pkgs.alejandra;
+        };
+        prettierd = {
+          command = lib.getExe pkgs.prettierd;
+        };
+        stylua = {
+          command = lib.getExe pkgs.stylua;
         };
         squeeze_blanks = {
           command = lib.getExe' pkgs.coreutils "cat";

@@ -1,19 +1,31 @@
-{pkgs, pkgs-old, ...}: {
+{pkgs-old, ...}: {
   plugins.lsp = {
     enable = true;
     servers = {
       nixd = {
-        enable = true; 
+        enable = true;
         package = pkgs-old.nixd;
       };
-      eslint.enable = true;
-      ts_ls.enable = true;
       bashls.enable = true;
-      cssls.enable = true;
+
       cmake.enable = true;
+
+      basedpyright.enable = true;
+
+      lua_ls.enable = true;
+
       dockerls.enable = true;
       docker_compose_language_service.enable = true;
-      pyright.enable = true;
+
+      html.enable = true;
+      cssls.enable = true;
+      tailwindcss.enable = true;
+      eslint.enable = true;
+      vtsls.enable = true;
+
+      jdtls.enable = true;
+
+      jsonls.enable = true;
       yamlls.enable = true;
     };
     # inlayHints = true;

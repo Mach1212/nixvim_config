@@ -12,7 +12,7 @@
   };
   keymaps = [
     {
-      key = "<leader>e";
+      key = "<leader>E";
       action = "<Cmd>Yazi<CR>";
       options.desc = "Open Yazi";
     }

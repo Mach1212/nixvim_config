@@ -14,7 +14,7 @@
         use_nvim_cmp_as_default = true;
       };
       completion = {
-        list.selection = "manual";
+        list.selection = "auto_insert";
         menu = {
           enabled = true;
           border = "rounded";

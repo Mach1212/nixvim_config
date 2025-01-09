@@ -5,22 +5,9 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixvim.url = "github:nix-community/nixvim"; 
+    nixvim.url = "github:nix-community/nixvim";
     nixpkgs-old.url = "github:NixOS/nixpkgs/05bbf675397d5366259409139039af8077d695ce";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-
-    # galaxyline = {
-    #   url = "github:NTBBloodbath/galaxyline.nvim";
-    #   flake = false;
-    # };
-    # plenary = {
-    #   url = "github:nvim-lua/plenary.nvim";
-    #   flake = false;
-    # };
-    # githubNotifications = {
-    #   url = "github:rlch/github-notifications.nvim";
-    #   flake = false;
-    # };
   };
 
   outputs = {

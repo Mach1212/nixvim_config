@@ -1,5 +1,8 @@
-{inputs, pkgs, ...}:
 {
+  inputs,
+  pkgs,
+  ...
+}: {
   package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   luaLoader.enable = true;
 
@@ -14,13 +17,6 @@
   };
 
   clipboard.register = "unnamedplus";
-
-  colorschemes.onedark = {
-    enable = true;
-    settings = {
-      style = "darker";
-    };
-  };
 
   performance = {
     byteCompileLua = {
