@@ -10,7 +10,7 @@
   };
   keymaps = [
     {
-      key = "<leader>uD";
+      key = "<leader>uN";
       action = "<CMD>lua require('notify').dismiss({pending=true,silent=true})<CR>";
       options.desc = "Notif Clear";
     }

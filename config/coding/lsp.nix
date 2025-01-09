@@ -1,11 +1,10 @@
-{pkgs, ...}: {
+{pkgs, pkgs-old, ...}: {
   plugins.lsp = {
     enable = true;
     servers = {
       nixd = {
-        enable = true;
-        package = pkgs.nixd;
-        cmd = ["bash" "-c" "cd ${pkgs.nixd} && ./bin/nixd"];
+        enable = true; 
+        package = pkgs-old.nixd;
       };
       eslint.enable = true;
       ts_ls.enable = true;
@@ -49,7 +48,7 @@
       action = "<CMD>LspInfo<CR>";
     }
     {
-      key = "<leader>ll";
+      key = "<leader>lI";
       options.desc = "Lsp Log";
       action = "<CMD>LspLog<CR>";
     }
@@ -72,6 +71,16 @@
       key = "<leader>lR";
       options.desc = "Lsp References";
       action = "<CMD>lua vim.lsp.buf.references()<CR>";
+    }
+    {
+      key = "<leader>ld";
+      options.desc = "Lsp Definition";
+      action = "<CMD>lua vim.lsp.buf.definition()<CR>";
+    }
+    {
+      key = "<leader>lD";
+      options.desc = "Lsp Declaration";
+      action = "<CMD>lua vim.lsp.buf.declaration()<CR>";
     }
   ];
 }

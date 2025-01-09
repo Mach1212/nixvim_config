@@ -59,7 +59,7 @@
             };
             rangeExclusiveHints.enable = true;
           };
-          lens. references = {
+          lens.references = {
             adt.enable = true;
             enumVariant.enable = true;
             method.enable = true;

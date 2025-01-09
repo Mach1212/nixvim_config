@@ -34,6 +34,8 @@ keybind \<space>ww doesn't work
 ## Why does neovim highlight issue
 ## See if noice signature is better than blink-cmp signature
 ## The lines at the top idk what they are but they go away when the cursor goes there. have the cursor stay below them.
+## when going into help tab or lsp logs quiting doesn't delete buffer
+## current active barbar tab is greyed out?
 
 # Completed
 

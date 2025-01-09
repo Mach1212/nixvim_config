@@ -1,4 +1,8 @@
-{helpers, pkgs, ...}: {
+{
+  helpers,
+  pkgs,
+  ...
+}: {
   # extraPackages = {
   #   (pkgs.stdenv.mkDerivation())
   # };
@@ -10,6 +14,7 @@
         use_nvim_cmp_as_default = true;
       };
       completion = {
+        list.selection = "manual";
         menu = {
           enabled = true;
           border = "rounded";
@@ -35,6 +40,12 @@
           };
         };
       };
+      signature = {
+        enabled = true;
+        window = {
+          border = "none";
+        };
+      };
       keymap = {
         preset = "super-tab";
         "<Tab>" = let
@@ -52,8 +63,7 @@
         "<CR>" = let
           select_and_accept = helpers.mkRaw ''
             function(cmp)
-              if cmp.snippet_active() then return cmp.accept()
-              else return cmp.select_and_accept() end
+              return cmp.accept()
             end
           '';
         in [
@@ -61,12 +71,6 @@
           "fallback"
         ];
       };
-      # signature = {
-      #   enabled = true;
-      #   window = {
-      #     border = "rounded";
-      #   };
-      # };
       sources = {
         cmdline = [];
         providers = {

@@ -1,6 +1,13 @@
 {
   plugins.fastaction = {
     enable = true;
+    settings = {
+      popup = {
+        hide_cursor = false;
+        title = "";
+        border = "none";
+      };
+    };
   };
   keymaps = [
     {

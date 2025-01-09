@@ -19,7 +19,7 @@
     ./number-toggle.nix
   ];
   plugins = {
-    lz-n.enable = true;
+    # lz-n.enable = true;
     guess-indent.enable = true;
     indent-blankline.enable = true;
     web-devicons.enable = true;

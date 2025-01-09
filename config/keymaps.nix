@@ -83,12 +83,6 @@
       action = "<gv";
       options.desc = "UnIndent Selection";
     }
-    {
-      mode = "c";
-      key = "q";
-      action = "<Esc>";
-      options.desc = "Escape from command lines";
-    }
     # {
     #   key = "";
     #   action = "";
