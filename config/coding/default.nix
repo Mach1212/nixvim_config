@@ -4,7 +4,7 @@
     ./rustaceanvim.nix
     # ./lsp-lines.nix
     ./blink-cmp.nix
-    # ./lint.nix
+    ./lint.nix
     ./conform.nix
     ./fastaction.nix
     ./illuminate.nix

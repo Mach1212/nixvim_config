@@ -1,6 +1,7 @@
 {
   imports = [
-    ./neotree.nix
+    # ./neotree.nix
+    ./chadtree.nix
     ./better-escape.nix
     ./telescope.nix
     ./treesitter.nix
@@ -24,6 +25,7 @@
   ];
   plugins = {
     # lz-n.enable = true;
+    lualine.enable = true;
     guess-indent.enable = true;
     web-devicons.enable = true;
     which-key.enable = true;
