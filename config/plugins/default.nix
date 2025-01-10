@@ -20,6 +20,7 @@
     ./octo.nix
     ./indent-blankline.nix
     ./astrotheme.nix
+    ./colorizer.nix
   ];
   plugins = {
     # lz-n.enable = true;

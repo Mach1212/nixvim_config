@@ -50,7 +50,7 @@
       '';
     }
     {
-      key = "ln";
+      key = "<leader>ln";
       options.desc = "Lsp Diagnostics";
       action = "<CMD>Telescope diagnostics<CR>";
     }
@@ -65,7 +65,7 @@
       action = "<CMD>LspLog<CR>";
     }
     {
-      key = "<leader>ln";
+      key = "<leader>lN";
       options.desc = "Lsp Notif";
       action = "<CMD>LspInfo<CR>";
     }

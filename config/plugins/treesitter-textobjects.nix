@@ -2,12 +2,7 @@
   plugins.treesitter-textobjects = {
     enable = true;
     lspInterop.enable = true;
+    select.lookahead = true;
+    swap.enable = true;
   };
-  keymaps = [
-    # {
-    #   key = "<leader>e";
-    #   action = "<CMD>Neotree toggle<CR>";
-    #   options.desc = "Neotree Toggle";
-    # }
-  ];
 }
