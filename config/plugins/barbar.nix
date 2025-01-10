@@ -10,12 +10,12 @@
   };
   keymaps = [
     {
-      key = "<S-h>";
+      key = "<A-h>";
       action = "<Cmd>BufferPrevious<CR>";
       options.desc = "Buffer Left";
     }
     {
-      key = "<S-l>";
+      key = "<A-l>";
       action = "<Cmd>BufferNext<CR>";
       options.desc = "Buffer Right";
     }
@@ -30,12 +30,12 @@
       options.desc = "Buffer Prev";
     }
     {
-      key = "<A-h>";
+      key = "<A-,>";
       action = "<Cmd>BufferMovePrevious<CR>";
       options.desc = "Buffer Move Right";
     }
     {
-      key = "<A-l>";
+      key = "<A-.>";
       action = "<Cmd>BufferMoveNext<CR>";
       options.desc = "Buffer Move Left";
     }

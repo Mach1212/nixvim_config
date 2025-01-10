@@ -8,5 +8,6 @@
     ./conform.nix
     ./fastaction.nix
     ./illuminate.nix
+    # ./lz-n.nix
   ];
 }

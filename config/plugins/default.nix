@@ -1,7 +1,7 @@
 {
   imports = [
-    # ./neotree.nix
-    ./chadtree.nix
+    ./neotree.nix
+    # ./chadtree.nix
     ./better-escape.nix
     ./telescope.nix
     ./treesitter.nix
@@ -22,9 +22,9 @@
     ./indent-blankline.nix
     ./astrotheme.nix
     ./colorizer.nix
+    ./startuptime.nix
   ];
   plugins = {
-    # lz-n.enable = true;
     lualine.enable = true;
     guess-indent.enable = true;
     web-devicons.enable = true;

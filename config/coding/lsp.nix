@@ -1,6 +1,10 @@
 {pkgs-old, ...}: {
   plugins.lsp = {
     enable = true;
+    # lazyLoad.settings = {
+    #   event = ["BufReadPost" "BufNewFile"];
+    #   cmd = ["LspInfo" "LspInstall" "LspUninstall"];
+    # };
     servers = {
       nixd = {
         enable = true;

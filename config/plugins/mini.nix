@@ -30,11 +30,4 @@
       };
     };
   };
-  keymaps = [
-    # {
-    #   key = "<S-h>";
-    #   action = "<Cmd>BufferPrevious<CR>";
-    #   options.desc = "Buffer Left";
-    # }
-  ];
 }
