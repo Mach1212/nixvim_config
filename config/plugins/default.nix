@@ -18,11 +18,12 @@
     ./yazi.nix
     ./number-toggle.nix
     ./inc-rename.nix
-    ./octo.nix
+    # ./octo.nix
     ./indent-blankline.nix
     ./astrotheme.nix
-    ./colorizer.nix
+    # ./colorizer.nix
     ./startuptime.nix
+    ./hlargs.nix
   ];
   plugins = {
     lualine.enable = true;

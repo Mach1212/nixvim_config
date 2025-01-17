@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   extraPlugins = [
     (pkgs.vimUtils.buildVimPlugin {
-      pname = "astrotheme";
+      pname = "startuptime";
       version = "latest";
       src = pkgs.fetchFromGitHub {
         owner = "dstein64";
