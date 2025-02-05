@@ -14,6 +14,8 @@
     termguicolors = true;
     shiftwidth = 2;
     tabstop = 2;
+    ignorecase = true;
+    smartcase = true;
   };
 
   clipboard.register = "unnamedplus";

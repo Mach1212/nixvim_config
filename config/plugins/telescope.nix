@@ -6,7 +6,7 @@
       fzy-native.enable = true;
     };
     settings.defaults = {
-      file_ignore_patterns = ["^%.git[/\\]" "[/\\]%.git[/\\]"];
+      # file_ignore_patterns = ["^%.git[/\\]" "[/\\]%.git[/\\]" "^%*.lock" "[/\\]*.lock*"];
       # path_display = "truncate";
       sorting_strategy = "ascending";
       layout_config = {
@@ -24,7 +24,7 @@
           q = "close";
           "h" = "results_scrolling_left"; # scroll left
           "l" = "results_scrolling_right"; # scroll right
-          "j" =  "move_selection_next"; # scroll down
+          "j" = "move_selection_next"; # scroll down
           "k" = "move_selection_previous"; # scroll up
           "<C-h>" = "preview_scrolling_left"; # scroll left
           "<C-l>" = "preview_scrolling_right"; # scroll right
@@ -51,7 +51,7 @@
     }
     {
       key = "<leader>fF";
-      action = "<CMD>Telescope find_files no_ignore=true<CR>";
+      action = "<CMD>Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>";
       options.desc = "Find Files All Files";
     }
     {
@@ -61,7 +61,7 @@
     }
     {
       key = "<leader>fW";
-      action = "<CMD>Telescope live_grep no_ignore=true<CR>";
+      action = "<CMD>Telescope live_grep glob_pattern=*<CR>";
       options.desc = "Find String All Files";
     }
     {

@@ -5,7 +5,7 @@
       diagnostics_format = "[#{s}] #{c} #{m}";
       # on_attach = ''
       #   function(client, bufnr)
-      #     if client.name == prettierd and not require("lspconfig.util").root_pattern("eslint.config.mjs") then 
+      #     if client.name == prettierd and not require("lspconfig.util").root_pattern("eslint.config.mjs") then
       #       return prettierd
       #     end
       #     return true

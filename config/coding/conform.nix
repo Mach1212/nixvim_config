@@ -14,6 +14,7 @@
           "stylua"
         ];
         javascript = [
+          "eslint_d"
           "prettierd"
         ];
         typescript = [

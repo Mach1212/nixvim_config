@@ -1,3 +1,5 @@
+# Rust has cool little lines in the errors which point to where it see's the problem and explains it.
+# This plugin impls those seamlessly into the code instead of a separate message.
 {
   plugins.lsp-lines = {
     enable = true;
