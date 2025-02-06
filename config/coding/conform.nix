@@ -18,6 +18,7 @@
           "prettierd"
         ];
         typescript = [
+          "eslint_d"
           "prettierd"
         ];
         "_" = [

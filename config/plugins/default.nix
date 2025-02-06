@@ -30,7 +30,6 @@
     guess-indent.enable = true;
     web-devicons.enable = true;
     which-key.enable = true;
-    treesitter-context.enable = true;
     intellitab.enable = true;
     rainbow-delimiters.enable = true;
     # smart-splits.enable = true; Waiting for zellij integration
@@ -49,5 +48,6 @@
       settings.watch_gitdir.enable = true;
     };
     ts-context-commentstring.enable = true;
+    # dropbar.enable = true;
   };
 }
