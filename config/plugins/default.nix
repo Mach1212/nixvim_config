@@ -1,6 +1,7 @@
 {
   imports = [
     ./neotree.nix
+    ./hlsearch.nix
     # ./chadtree.nix
     ./better-escape.nix
     ./telescope.nix
@@ -48,6 +49,6 @@
       settings.watch_gitdir.enable = true;
     };
     ts-context-commentstring.enable = true;
-    # dropbar.enable = true;
+    dropbar.enable = true;
   };
 }

@@ -18,6 +18,10 @@
     smartcase = true;
   };
 
+  # extraConfigLua = ''
+  #   vim.opt.mouse = ""
+  # '';
+
   clipboard.register = "unnamedplus";
 
   performance = {

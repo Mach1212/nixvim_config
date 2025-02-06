@@ -35,24 +35,24 @@
     # inlayHints = true;
   };
   keymaps = [
-    {
-      key = "[d";
-      options.desc = "Previous diagnostic";
-      action.__raw = ''
-        function()
-          vim.diagnostic.goto_prev()
-        end
-      '';
-    }
-    {
-      key = "]d";
-      options.desc = "Next diagnostic";
-      action.__raw = ''
-        function()
-          vim.diagnostic.goto_next()
-        end
-      '';
-    }
+    # {
+    #   key = "[d";
+    #   options.desc = "Previous diagnostic";
+    #   action.__raw = ''
+    #     function()
+    #       vim.diagnostic.goto_prev()
+    #     end
+    #   '';
+    # }
+    # {
+    #   key = "]d";
+    #   options.desc = "Next diagnostic";
+    #   action.__raw = ''
+    #     function()
+    #       vim.diagnostic.goto_next()
+    #     end
+    #   '';
+    # }
     {
       key = "<leader>ln";
       options.desc = "Lsp Diagnostics";
@@ -78,16 +78,16 @@
     #   options.desc = "Lsp Action";
     #   action = "<CMD>lua vim.lsp.buf.code_action()<CR>";
     # }
-    {
-      key = "<leader>lr";
-      options.desc = "Lsp Rename";
-      action = "<CMD>lua vim.lsp.buf.rename()<CR>";
-    }
-    {
-      key = "<leader>lR";
-      options.desc = "Lsp References";
-      action = "<CMD>lua vim.lsp.buf.references()<CR>";
-    }
+    # {
+    #   key = "<leader>lr";
+    #   options.desc = "Lsp Rename";
+    #   action = "<CMD>lua vim.lsp.buf.rename()<CR>";
+    # }
+    # {
+    #   key = "<leader>lR";
+    #   options.desc = "Lsp References";
+    #   action = "<CMD>lua vim.lsp.buf.references()<CR>";
+    # }
     {
       key = "<leader>ld";
       options.desc = "Lsp Definition";
