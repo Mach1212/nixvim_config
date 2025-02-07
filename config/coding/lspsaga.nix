@@ -5,7 +5,7 @@
       max_preview_lines = 10;
     };
     codeAction = {
-      extendGitSigns = true;
+      # extendGitSigns = true;
       numShortcut = true;
       showServerName = true;
     };
@@ -14,6 +14,9 @@
       sign = false;
     };
     beacon.enable = false;
+    diagnostic = {
+      showCodeAction = false;
+    };
   };
   keymaps = [
     {
