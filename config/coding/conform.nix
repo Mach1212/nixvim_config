@@ -13,14 +13,14 @@
         lua = [
           "stylua"
         ];
-        javascript = [
-          "eslint_d"
-          "prettierd"
-        ];
-        typescript = [
-          "eslint_d"
-          "prettierd"
-        ];
+        # javascript = [
+        #   "eslint_d"
+        #   "prettierd"
+        # ];
+        # typescript = [
+        #   "eslint_d"
+        #   "prettierd"
+        # ];
         "_" = [
           "squeeze_blanks"
           "trim_whitespace"

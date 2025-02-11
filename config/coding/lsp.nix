@@ -24,8 +24,7 @@
       html.enable = true;
       cssls.enable = true;
       tailwindcss.enable = true;
-      eslint.enable = true;
-      vtsls.enable = true;
+      # eslint.enable = true;
 
       jdtls.enable = true;
 

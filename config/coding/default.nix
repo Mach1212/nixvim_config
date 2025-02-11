@@ -10,5 +10,6 @@
     # ./fastaction.nix
     ./illuminate.nix
     # ./lz-n.nix
+    ./typescript-tools.nix
   ];
 }
