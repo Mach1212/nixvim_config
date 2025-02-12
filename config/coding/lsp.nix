@@ -32,14 +32,6 @@
       eslint = {
         enable = true;
         package = pkgs.eslint_d;
-        onAttach.function =
-          #lua
-          ''
-            vim.api.nvim_create_autocmd("BufWritePre", {
-              buffer = bufnr,
-              command = "EslintFixAll",
-            })
-          '';
       };
 
       jdtls.enable = true;

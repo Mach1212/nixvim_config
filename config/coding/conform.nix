@@ -21,6 +21,22 @@
           "eslint_d"
           "prettierd"
         ];
+        javascriptreact = [
+          "eslint_d"
+          "prettierd"
+        ];
+        "javascript.jsx" = [
+          "eslint_d"
+          "prettierd"
+        ];
+        typescriptreact = [
+          "eslint_d"
+          "prettierd"
+        ];
+        "typescript.tsx" = [
+          "eslint_d"
+          "prettierd"
+        ];
         "_" = [
           "squeeze_blanks"
           "trim_whitespace"
@@ -31,7 +47,7 @@
       notify_on_error = true;
       notify_no_formatters = true;
       format_on_save = {
-        timeout_ms = 200;
+        timeout_ms = 1000;
         lsp_format = "fallback";
       };
       # format_on_save =

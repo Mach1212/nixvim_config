@@ -1,11 +1,4 @@
-{
-  helpers,
-  pkgs,
-  ...
-}: {
-  # extraPackages = {
-  #   (pkgs.stdenv.mkDerivation())
-  # };
+{helpers, ...}: {
   plugins.blink-cmp = {
     enable = true;
     settings = {
@@ -14,7 +7,10 @@
         use_nvim_cmp_as_default = true;
       };
       completion = {
-        list.selection = "auto_insert";
+        list.selection = {
+          auto_insert = false;
+          preselect = false;
+        };
         menu = {
           enabled = true;
           border = "rounded";
