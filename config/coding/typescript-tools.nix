@@ -9,13 +9,14 @@
       #     )
       #   '';
       # };
+
+      on_attach = ''
+        function(client)
+        	client.server_capabilities.documentFormattingProvider = false
+        	client.server_capabilities.documentRangeFormattingProvider = false
+        end
+      '';
       settings = {
-        on_attach = ''
-          function(client)
-          	client.server_capabilities.documentFormattingProvider = false
-          	client.server_capabilities.documentRangeFormattingProvider = false
-          end
-        '';
         tsserver_file_preferences = {
           __raw = ''
             function(ft)

@@ -1,4 +1,9 @@
-{pkgs-old, ...}: {
+{
+  pkgs,
+  pkgs-old,
+  helpers,
+  ...
+}: {
   plugins.lsp = {
     enable = true;
     # lazyLoad.settings = {
@@ -24,7 +29,18 @@
       html.enable = true;
       cssls.enable = true;
       tailwindcss.enable = true;
-      # eslint.enable = true;
+      eslint = {
+        enable = true;
+        package = pkgs.eslint_d;
+        onAttach.function =
+          #lua
+          ''
+            vim.api.nvim_create_autocmd("BufWritePre", {
+              buffer = bufnr,
+              command = "EslintFixAll",
+            })
+          '';
+      };
 
       jdtls.enable = true;
 
@@ -32,6 +48,15 @@
       yamlls.enable = true;
     };
     # inlayHints = true;
+  };
+  diagnostics = {
+    virtual_text = {
+      source = "always";
+    };
+    severity_sort = true;
+    float = {
+      source = "always";
+    };
   };
   keymaps = [
     # {

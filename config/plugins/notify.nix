@@ -1,12 +1,14 @@
 {
   plugins.notify = {
     enable = true;
-    timeout = 3000;
-    minimumWidth = 30;
-    maxWidth = 80;
-    maxHeight = 10;
-    # render = "wrapped-compact";
-    stages = "fade";
+    settings = {
+      timeout = 3000;
+      minimum_width = 30;
+      max_width = 80;
+      max_height = 10;
+      # render = "wrapped-compact";
+      stages = "fade";
+    };
   };
   keymaps = [
     {
