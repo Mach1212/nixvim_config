@@ -25,6 +25,8 @@
     # ./colorizer.nix
     ./startuptime.nix
     ./hlargs.nix
+    ./project.nix
+    ./auto-session.nix
   ];
   plugins = {
     lualine.enable = true;

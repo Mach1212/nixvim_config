@@ -14,28 +14,28 @@
           "stylua"
         ];
         javascript = [
-          "eslint_d"
           "prettierd"
+          "eslint_d"
         ];
         typescript = [
-          "eslint_d"
           "prettierd"
+          "eslint_d"
         ];
         javascriptreact = [
-          "eslint_d"
           "prettierd"
+          "eslint_d"
         ];
         "javascript.jsx" = [
-          "eslint_d"
           "prettierd"
+          "eslint_d"
         ];
         typescriptreact = [
-          "eslint_d"
           "prettierd"
+          "eslint_d"
         ];
         "typescript.tsx" = [
-          "eslint_d"
           "prettierd"
+          "eslint_d"
         ];
         "_" = [
           "squeeze_blanks"
@@ -47,7 +47,7 @@
       notify_on_error = true;
       notify_no_formatters = true;
       format_on_save = {
-        timeout_ms = 1000;
+        timeout_ms = 5000;
         lsp_format = "fallback";
       };
       # format_on_save =

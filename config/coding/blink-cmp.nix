@@ -8,7 +8,6 @@
       };
       completion = {
         list.selection = {
-          auto_insert = false;
           preselect = false;
         };
         menu = {
@@ -30,17 +29,17 @@
         };
         documentation = {
           auto_show = true;
-          auto_show_delay_ms = 1000;
+          auto_show_delay_ms = 500;
           window = {
             border = "rounded";
           };
         };
       };
       signature = {
-        enabled = true;
-        window = {
-          border = "none";
-        };
+        enabled = false;
+        # window = {
+        #   border = "none";
+        # };
       };
       keymap = {
         preset = "super-tab";
