@@ -27,6 +27,7 @@
     ./hlargs.nix
     ./project.nix
     ./auto-session.nix
+    ./gitsigns.nix
   ];
   plugins = {
     lualine.enable = true;
@@ -46,10 +47,6 @@
       };
     };
     render-markdown.enable = true;
-    gitsigns = {
-      enable = true;
-      settings.watch_gitdir.enable = true;
-    };
     ts-context-commentstring.enable = true;
     dropbar.enable = true;
   };

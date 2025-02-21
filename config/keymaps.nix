@@ -83,6 +83,19 @@
       action = "<gv";
       options.desc = "UnIndent Selection";
     }
+    {
+      key = "p";
+      action = ''"+p`]'';
+    }
+    {
+      key = "j";
+      action = "gj";
+    }
+    {
+      key = "k";
+      action = "gk";
+    }
+
     # {
     #   key = "";
     #   action = "";
