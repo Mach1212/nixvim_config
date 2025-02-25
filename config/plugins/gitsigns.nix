@@ -32,7 +32,7 @@
     {
       key = "<leader>ud";
       options.desc = "Toggle Git Diff";
-      action = ''<CMD>Gitsigns toggle_word_diff<CR>'';
+      action = "<CMD>call ToggleGitDiff()<CR>";
     }
     {
       mode = "v";
@@ -41,4 +41,20 @@
       action = ''<CMD>Gitsigns select_hunk<CR>'';
     }
   ];
+  extraConfigVim =
+    #vim
+    ''
+      function! ToggleGitDiff()
+          if g:mach12toggleGitDiff == 0
+              let g:mach12toggleGitDiff=1
+              Gitsigns toggle_linehl
+              Gitsigns toggle_word_diff
+          elseif g:mach12toggleGitDiff == 1
+              let g:mach12toggleGitDiff=0
+              Gitsigns toggle_linehl
+              Gitsigns toggle_word_diff
+          endif
+      endfunction
+      let g:mach12toggleGitDiff = 0
+    '';
 }
