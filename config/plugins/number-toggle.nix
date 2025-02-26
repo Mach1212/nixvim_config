@@ -1,5 +1,4 @@
 {
-  plugins.numbertoggle.enable = false;
   keymaps = [
     {
       key = "<leader>un";
