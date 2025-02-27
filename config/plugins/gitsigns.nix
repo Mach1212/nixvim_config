@@ -30,7 +30,7 @@
       action = ''<CMD>Gitsigns nav_hunk prev<CR>'';
     }
     {
-      key = "<leader>ud";
+      key = "<leader>ug";
       options.desc = "Toggle Git Diff";
       action = "<CMD>call ToggleGitDiff()<CR>";
     }

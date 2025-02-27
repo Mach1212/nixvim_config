@@ -16,6 +16,7 @@
     tabstop = 2;
     ignorecase = true;
     smartcase = true;
+    undofile = true;
   };
 
   # extraConfigLua = ''
