@@ -43,15 +43,18 @@
     };
     keymaps = {};
   };
-  keymaps = [
+  keymaps = let
+    ignore_normal = "-g,!**/node_modules/*,-g,!**/*.lock,-g,!**/dist/*,-g,!**/target/*";
+    ignore_hidden = "${ignore_normal},!**/.git/*";
+  in [
     {
       key = "<leader>ff";
-      action = "<CMD>Telescope find_files<CR>";
+      action = "<CMD>Telescope find_files find_command=rg,--files,${ignore_normal}<CR>";
       options.desc = "Find Files";
     }
     {
       key = "<leader>fF";
-      action = "<CMD>Telescope find_files find_command=rg,--files,-uu,-g,!**/.git/*,-g,!**/node_modules/*,-g,!**/*.lock,-g,!**/dist/*,-g,!**/target/*<CR>";
+      action = "<CMD>Telescope find_files find_command=rg,--files,-uu,${ignore_hidden}<CR>";
       options.desc = "Find Files Hidden";
     }
     {
@@ -61,12 +64,12 @@
     }
     {
       key = "<leader>fw";
-      action = "<CMD>Telescope live_grep<CR>";
+      action = "<CMD>Telescope live_grep additional_args=${ignore_normal}<CR>";
       options.desc = "Find String";
     }
     {
       key = "<leader>fW";
-      action = "<CMD>Telescope live_grep additional_args=-uu,-g,!**/.git/*,-g,!**/node_modules/*,-g,!**/*.lock,-g,!**/dist/*,-g,!**/target/*<CR>";
+      action = "<CMD>Telescope live_grep additional_args=${ignore_hidden}<CR>";
       options.desc = "Find String Hidden";
     }
     {

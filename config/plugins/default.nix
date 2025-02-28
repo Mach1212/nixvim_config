@@ -28,6 +28,8 @@
     ./project.nix
     ./auto-session.nix
     ./gitsigns.nix
+    # ./copilot.nix
+    ./codecompanion.nix
   ];
   plugins = {
     lualine.enable = true;

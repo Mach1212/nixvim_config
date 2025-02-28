@@ -2,26 +2,28 @@
   keymaps = [
     {
       key = "<leader>un";
-      action = "<CMD>call ToggleLineNumbers()<CR>";
+      action = "<CMD>ToggleLineNumbers<CR>";
       options.desc = "Toggle Line Numbers";
     }
   ];
-  extraConfigVim =
-    #vim
+  extraConfigLua =
+    #lua
     ''
-      function! ToggleLineNumbers()
-          if g:mach12toggleLineNumbers == 0
-              let g:mach12toggleLineNumbers=1
-              set nonumber norelativenumber
-          elseif g:mach12toggleLineNumbers == 1
-              let g:mach12toggleLineNumbers=2
-              set number
-          elseif g:mach12toggleLineNumbers == 2
-              let g:mach12toggleLineNumbers=0
-              set number relativenumber
-          endif
-      endfunction
-      let g:mach12toggleLineNumbers = 2
-      call ToggleLineNumbers()
+      local mach12toggleLineNumbers = 0
+      vim.api.nvim_create_user_command("ToggleLineNumbers", function(args)
+        if mach12toggleLineNumbers == 0 then
+          vim.opt.number = false
+          vim.opt.relativenumber = false
+          mach12toggleLineNumbers = 1
+        elseif mach12toggleLineNumbers == 1 then
+          vim.opt.number = true
+          mach12toggleLineNumbers = 2
+        elseif mach12toggleLineNumbers == 2 then
+          vim.opt.relativenumber = true
+          mach12toggleLineNumbers = 0
+        end
+      end, {
+        desc = "Toggle line numbers",
+      })
     '';
 }
