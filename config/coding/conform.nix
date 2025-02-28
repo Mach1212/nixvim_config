@@ -65,7 +65,6 @@
               return
             end
             if vim.g.format_modifications_only then
-              vim.notify(string.format("OUTSIDE Global %s, Buffer %s %s, Hunk %s", vim.g.disable_autoformat, vim.b.disable_autoformat, vim.b[bufnr].disable_autoformat, vim.g.disable_autoformat))
               -- Prefer to format Git hunks over entire file
               format_hunks(bufnr)
             else
