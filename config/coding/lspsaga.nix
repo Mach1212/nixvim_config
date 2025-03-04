@@ -4,6 +4,9 @@
     extraOptions = {
       max_preview_lines = 10;
     };
+    finder.methods = {
+      tyd = "textDocument/typeDefinition";
+    };
     codeAction = {
       # extendGitSigns = true;
       numShortcut = true;
@@ -19,6 +22,10 @@
     };
   };
   keymaps = [
+    {
+      key = "<S-A-k>";
+      action = "<CMD>Lspsaga finder ref+imp+tyd<CR>";
+    }
     {
       key = "[d";
       options.desc = "Previous diagnostic";

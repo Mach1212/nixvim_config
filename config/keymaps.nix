@@ -91,10 +91,6 @@
       key = "j";
       action = "gj";
     }
-    {
-      key = "k";
-      action = "gk";
-    }
 
     # {
     #   key = "";

@@ -6,37 +6,25 @@
   plugins.conform-nvim = {
     enable = true;
     settings = {
-      formatters_by_ft = {
+      formatters_by_ft = let
+        jsFormat = [
+          "prettierd"
+          "eslint_d"
+        ];
+      in {
         nix = [
           "alejandra"
+          "injected"
         ];
         lua = [
           "stylua"
         ];
-        javascript = [
-          "prettierd"
-          "eslint_d"
-        ];
-        typescript = [
-          "prettierd"
-          "eslint_d"
-        ];
-        javascriptreact = [
-          "prettierd"
-          "eslint_d"
-        ];
-        "javascript.jsx" = [
-          "prettierd"
-          "eslint_d"
-        ];
-        typescriptreact = [
-          "prettierd"
-          "eslint_d"
-        ];
-        "typescript.tsx" = [
-          "prettierd"
-          "eslint_d"
-        ];
+        javascript = jsFormat;
+        typescript = jsFormat;
+        javascriptreact = jsFormat;
+        "javascript.jsx" = jsFormat;
+        typescriptreact = jsFormat;
+        "typescript.tsx" = jsFormat;
         python = [
           "black"
           "isort"
@@ -73,6 +61,18 @@
           end
         '';
       formatters = {
+        injected = {
+          options = {
+            ignore_errors = false;
+            lang_to_ext = {
+              lua = "lua";
+              bash = "sh";
+              markdown = "md";
+              python = "py";
+              rust = "rs";
+            };
+          };
+        };
         shellcheck = {
           command = lib.getExe pkgs.shellcheck;
         };
