@@ -11,6 +11,7 @@
     ./illuminate.nix
     # ./lz-n.nix
     ./typescript-tools.nix
+    ./autocmds.nix
     ./otter.nix
   ];
 }
