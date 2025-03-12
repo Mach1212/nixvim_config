@@ -29,7 +29,8 @@
     ./auto-session.nix
     ./gitsigns.nix
     # ./copilot.nix
-    ./codecompanion.nix
+    # ./codecompanion.nix
+    ./jupyter.nix
   ];
   plugins = {
     lualine.enable = true;

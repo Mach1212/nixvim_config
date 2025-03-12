@@ -19,13 +19,15 @@
 
       cmake.enable = true;
 
-      basedpyright.enable = true;
+      # python
+      ruff.enable = true;
 
       lua_ls.enable = true;
 
       dockerls.enable = true;
       docker_compose_language_service.enable = true;
 
+      # webdev
       html.enable = true;
       cssls.enable = true;
       tailwindcss.enable = true;
@@ -34,6 +36,7 @@
         package = pkgs.eslint_d;
       };
 
+      # java
       jdtls.enable = true;
 
       jsonls.enable = true;

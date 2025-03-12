@@ -26,8 +26,7 @@
         typescriptreact = jsFormat;
         "typescript.tsx" = jsFormat;
         python = [
-          "black"
-          "isort"
+          "ruff"
         ];
         json = [
           "jq"
@@ -97,11 +96,8 @@
         squeeze_blanks = {
           command = lib.getExe' pkgs.coreutils "cat";
         };
-        black = {
-          command = lib.getExe pkgs.black;
-        };
-        isort = {
-          command = lib.getExe pkgs.isort;
+        ruff = {
+          command = lib.getExe pkgs.ruff;
         };
         yamlfmt = {
           command = lib.getExe pkgs.yamlfmt;
