@@ -23,7 +23,7 @@
   };
   keymaps = [
     {
-      key = "gD";
+      key = "gr";
       action = "<CMD>Lspsaga finder ref+imp+tyd<CR>";
     }
     {
