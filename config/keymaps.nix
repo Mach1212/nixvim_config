@@ -91,6 +91,10 @@
       key = "j";
       action = "gj";
     }
+    {
+      key = "y";
+      action = ''y`]'';
+    }
 
     # {
     #   key = "";

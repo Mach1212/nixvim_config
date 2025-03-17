@@ -20,6 +20,11 @@
       action = ''<CMD>Gitsigns reset_hunk<CR>'';
     }
     {
+      key = "<leader>gR";
+      options.desc = "Git Reset Buffer";
+      action = ''<CMD>Gitsigns reset_buffer<CR>'';
+    }
+    {
       key = "]g";
       options.desc = "Git Next Hunk";
       action = ''<CMD>Gitsigns nav_hunk next<CR>'';

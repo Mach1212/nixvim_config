@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-old,
+  pkgs-pylyzer,
   helpers,
   ...
 }: {
@@ -20,7 +21,11 @@
       cmake.enable = true;
 
       # python
-      ruff.enable = true;
+      pylyzer = {
+        package = null;
+        enable = true;
+      };
+      # basedpyright.enable = true;
 
       lua_ls.enable = true;
 

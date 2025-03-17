@@ -12,6 +12,9 @@
           "eslint_d"
         ];
       in {
+        markdown = [
+          "injected"
+        ];
         nix = [
           "alejandra"
           "injected"
@@ -26,7 +29,9 @@
         typescriptreact = jsFormat;
         "typescript.tsx" = jsFormat;
         python = [
-          "ruff"
+          "ruff_fix"
+          "ruff_organize_imports"
+          "ruff_format"
         ];
         json = [
           "jq"
@@ -71,6 +76,15 @@
               rust = "rs";
             };
           };
+        };
+        ruff_fix = {
+          command = lib.getExe pkgs.ruff;
+        };
+        ruff_organize_imports = {
+          command = lib.getExe pkgs.ruff;
+        };
+        ruff_format = {
+          command = lib.getExe pkgs.ruff;
         };
         shellcheck = {
           command = lib.getExe pkgs.shellcheck;
@@ -135,7 +149,7 @@
       default_format_options = {
       	lsp_fallback = true,
       	async = false,
-      	timeout = 5000,
+      	timeout_ms = 20000,
       }
       local range_ignore_filetypes = { "lua" }
       local format = require("conform").format

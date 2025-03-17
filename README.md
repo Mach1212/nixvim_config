@@ -1,3 +1,7 @@
+# Install
+- pip instll jupytext
+- cargo install pylyzer
+
 # Dev
 Update via nix flake update --override-input nixpkgs github:NixOS/nixpkgs/c46290747b2aaf090f48a478270feb858837bf11
 

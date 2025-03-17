@@ -41,21 +41,22 @@
         };
       };
     };
+
     keymaps = {};
   };
   keymaps = let
-    ignore_normal = "-g,!**/node_modules/*,-g,!**/*.lock,-g,!**/dist/*,-g,!**/target/*";
-    ignore_hidden = "${ignore_normal},!**/.git/*";
+    findFilesAvoid = ",-g,!**/node_modules/*,-g,!**/*lock*,-g,!**/.git/*,-g,!**/venv/*";
+    findStringAvoid = '',"-g","!**/node_modules/*","-g","!**/*lock*","-g","!**/.git/*","-g","!**/venv/*"'';
   in [
     {
       key = "<leader>ff";
-      action = "<CMD>Telescope find_files find_command=rg,--files,${ignore_normal}<CR>";
+      action = "<CMD>Telescope find_files find_command=rg,--files,--hidden${findFilesAvoid}<CR>";
       options.desc = "Find Files";
     }
     {
       key = "<leader>fF";
-      action = "<CMD>Telescope find_files find_command=rg,--files,-uu,${ignore_hidden}<CR>";
-      options.desc = "Find Files Hidden";
+      action = "<CMD>Telescope find_files find_command=rg,--files,--hidden,--no-ignore${findFilesAvoid}<CR>";
+      options.desc = "Find Files Ignored";
     }
     {
       key = "<leader>f<A-f>";
@@ -64,17 +65,17 @@
     }
     {
       key = "<leader>fw";
-      action = "<CMD>Telescope live_grep additional_args=${ignore_normal}<CR>";
+      action = ''<CMD>lua require("telescope.builtin").live_grep({ additional_args = function() return { "--hidden"${findStringAvoid} } end })<CR>'';
       options.desc = "Find String";
     }
     {
       key = "<leader>fW";
-      action = "<CMD>Telescope live_grep additional_args=${ignore_hidden}<CR>";
-      options.desc = "Find String Hidden";
+      action = ''<CMD>lua require("telescope.builtin").live_grep({ additional_args = function() return { "--hidden","--no-ignore"${findStringAvoid} } end })<CR>'';
+      options.desc = "Find String Ignored";
     }
     {
       key = "<leader>f<A-w>";
-      action = "<CMD>Telescope live_grep additional_args=-uu<CR>";
+      action = ''<CMD>lua require("telescope.builtin").live_grep({ additional_args = function() return { "-uu" } end })<CR>'';
       options.desc = "Find String All";
     }
     {
