@@ -24,7 +24,7 @@
   keymaps = [
     {
       key = "gr";
-      action = "<CMD>Lspsaga finder ref+imp+tyd<CR>";
+      action = "<CMD>Lspsaga finder tyd+ref+imp<CR>";
     }
     {
       key = "[d";

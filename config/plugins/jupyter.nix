@@ -5,6 +5,8 @@
       enable = true;
       settings = {
         auto_open_output = false;
+        output_show_more = true;
+        virt_text_max_lines = 8;
         image_provider = "image.nvim";
         # output_win_cover_gutter = true;
         # output_win_hide_on_leave = true;
@@ -156,7 +158,7 @@
             "cell_type": "markdown",
             "metadata": {},
             "source": [
-              ""
+              "# basedpyright: ignore[reportUnusedCallResult]"
             ]
            }
           ],

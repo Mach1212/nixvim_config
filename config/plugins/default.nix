@@ -15,15 +15,12 @@
     ./flash.nix
     ./notify.nix
     ./lazygit.nix
-    # ./comment.nix
     ./noice.nix
     ./yazi.nix
     ./number-toggle.nix
-    # ./inc-rename.nix
     # ./octo.nix
     ./indent-blankline.nix
     ./astrotheme.nix
-    # ./colorizer.nix
     ./startuptime.nix
     ./hlargs.nix
     # ./project.nix Breaks neovim cwd tracking with auto-session monorepo rpoblem.
