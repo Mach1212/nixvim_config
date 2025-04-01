@@ -30,14 +30,13 @@
     # ./codecompanion.nix
     ./jupyter.nix
     ./gitlinker.nix
+    ./ufo.nix
   ];
   plugins = {
     image.enable = true;
     lualine.enable = true;
-    guess-indent.enable = true;
     web-devicons.enable = true;
     which-key.enable = true;
-    intellitab.enable = true;
     rainbow-delimiters.enable = true;
     # smart-splits.enable = true; Waiting for zellij integration
     transparent.enable = true;

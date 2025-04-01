@@ -2,7 +2,7 @@
   plugins.treesitter = {
     enable = true;
     nixvimInjections = false;
-    # folding = true;
+    folding = true;
     settings = {
       highlight = {
         additional_vim_regex_highlighting = true;
@@ -19,5 +19,8 @@
         __raw = "vim.fs.joinpath(vim.fn.stdpath('data'), 'treesitter')";
       };
     };
+  };
+  opts = {
+    foldenable = false;
   };
 }

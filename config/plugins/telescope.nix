@@ -44,10 +44,6 @@
 
     keymaps = {};
   };
-  extraConfigVim = ''
-    vim.wo.foldmethod = 'expr'
-    vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-  '';
   keymaps = let
     findFilesAvoid = ",-g,!**/node_modules/*,-g,!**/*lock*,-g,!**/.git/*,-g,!**/venv/*";
     findStringAvoid = '',"-g","!**/node_modules/*","-g","!**/*lock*","-g","!**/.git/*","-g","!**/venv/*"'';
