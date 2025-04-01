@@ -18,6 +18,11 @@
     ignorecase = true;
     smartcase = true;
     undofile = true;
+    foldlevel = 99;
+    foldlevelstart = 1;
+    foldnestmax = 2;
+    mouse = "a";
+    mousemodel = "extend";
   };
 
   # extraConfigLua = ''

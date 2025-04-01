@@ -139,6 +139,11 @@
     }
     {
       key = "<leader>u<A-f>";
+      action = "<CMD>FormatGitHunksToggleBuffer<CR>";
+      options.desc = "Toggle Buffer Git Hunk Formatting";
+    }
+    {
+      key = "<leader>u<A-S-f>";
       action = "<CMD>FormatGitHunksToggle<CR>";
       options.desc = "Toggle Git Hunk Formatting";
     }
@@ -223,6 +228,13 @@
       	vim.notify("GitHunksFormat: " .. tostring(vim.g.format_modifications_only))
       end, {
       	desc = "Toggle git hunks autoformat-on-save",
+      	bang = true,
+      })
+      vim.api.nvim_create_user_command("FormatGitHunksToggleBuffer", function(args)
+      	vim.g.format_modifications_only = not vim.b.format_modifications_only
+      	vim.notify("GitHunksFormat: " .. tostring(vim.b.format_modifications_only))
+      end, {
+      	desc = "Toggle git hunks autoformat-on-save in buffer",
       	bang = true,
       })
     '';

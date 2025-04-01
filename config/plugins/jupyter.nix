@@ -158,7 +158,7 @@
             "cell_type": "markdown",
             "metadata": {},
             "source": [
-              "# basedpyright: ignore[reportUnusedCallResult]"
+              "# basedpyright: ignore[reportUnusedCallResult]",
             ]
            }
           ],
@@ -252,12 +252,12 @@
       options.desc = "Run Range";
     }
     {
-      key = "<leader>ja";
+      key = "<leader>jA";
       action = ''<CMD>lua require("quarto.runner").run_below()<CR>'';
       options.desc = "Run cells Below";
     }
     {
-      key = "<leader>jA";
+      key = "<leader>ja";
       action = ''<CMD>lua require("quarto.runner").run_above()<CR>'';
       options.desc = "Run cells Above";
     }

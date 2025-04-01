@@ -24,7 +24,7 @@
   keymaps = [
     {
       key = "gr";
-      action = "<CMD>Lspsaga finder tyd+ref+imp<CR>";
+      action = "<CMD>lua require('telescope.builtin').lsp_references()<CR>";
     }
     {
       key = "[d";
@@ -44,7 +44,7 @@
     {
       key = "gd";
       options.desc = "Goto Definition";
-      action = ''<CMD>Lspsaga goto_definition<CR>'';
+      action = ''<CMD>lua require('telescope.builtin').lsp_definitions()<CR>zz'';
     }
     {
       key = "<leader>lS";
