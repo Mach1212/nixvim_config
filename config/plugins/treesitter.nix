@@ -21,6 +21,7 @@
     };
   };
   opts = {
-    foldenable = false;
+    foldmethod = "indent";
+    foldlevelstart = 99;
   };
 }

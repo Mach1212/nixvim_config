@@ -24,6 +24,7 @@
   keymaps = [
     {
       key = "gr";
+      options.desc = "Get References";
       action = "<CMD>lua require('telescope.builtin').lsp_references()<CR>";
     }
     {

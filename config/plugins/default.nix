@@ -31,6 +31,7 @@
     ./jupyter.nix
     ./gitlinker.nix
     ./ufo.nix
+    ./nerdy.nix
   ];
   plugins = {
     image.enable = true;

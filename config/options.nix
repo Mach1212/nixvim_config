@@ -36,7 +36,7 @@
     };
     combinePlugins = {
       enable = true;
-      standalonePlugins = [];
+      standalonePlugins = ["conform.nvim"];
     };
   };
 
